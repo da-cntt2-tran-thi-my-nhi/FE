@@ -25,11 +25,6 @@ const AuthPage = () => {
     navigate('/auth/login');
   };
 
-  const switchToRegister = () => {
-    setActiveTab('register');
-    navigate('/auth/register');
-  };
-
   const switchToForgotPassword = () => {
     setActiveTab(null);
     navigate('/auth/forgot-password');

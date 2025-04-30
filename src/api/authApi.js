@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5055/v1/auth_management';
-
+const API_URL = `${process.env.REACT_APP_BASE_URL}/auth_management`;
 const api = axios.create({
   baseURL: API_URL,
 });
+
 // Thêm token vào header 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
